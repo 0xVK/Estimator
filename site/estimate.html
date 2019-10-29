@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+        <a href="/" class="btn waves-effect waves-light light-blue accent-3"><i class="material-icons right">arrow_back</i>Back</a><br><br>
+        <h5>The calculation has successfully been comleted. Please, see the
+          generated pdf document below for more details.</h5><br>
+        <br><br>
+        <a class="waves-effect waves-light btn-large center green accent-4 white" href="{{ data.file_name }}">
+          <i class="material-icons right">picture_as_pdf</i>Upgrade-calculations.pdf</a>
+
+{% endblock %}

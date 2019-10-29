@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+        {% block content %}
+            <form class="" action="/estimate" method="post" onsubmit="send_form(); return false;" id="main_form">
+              <div class="row">
+                <div class="col s6"><input type="text" placeholder="First name" name="fname" requiered></div>
+                <div class="col s6"><input type="email" placeholder="Email" name="email"></div>
+              </div>
+              <div class="row">
+                <div class="col s6"><input type="text" placeholder="Last name" name="lname"></div>
+                <div class="col s6"><input type="text" placeholder="Phone" name="phone"></div>
+              </div>
+              <div class="row">
+                <div class="col s4 offset-s4">How many standart Microsoft Dynamics NAV
+                objects have been modified in the source database?</div>
+                <div class="col s4">How many new objects have been created in your
+                  Microsoft Dynamics NAV source database?</div>
+              </div>
+              <div class="row">
+                <div class="col s4">№ of tables</div>
+                <div class="col s4"><input type="number" placeholder="from" name="from_tables" value="0"></div>
+                <div class="col s4"><input type="number" placeholder="to" name="to_tables" value="0"></div>
+              </div>
+              <div class="row">
+                <div class="col s4">№ of pages</div>
+                <div class="col s4"><input type="number" placeholder="from" name="from_pages" value="0"></div>
+                <div class="col s4"><input type="number" placeholder="to" name="to_pages" value="0"></div>
+              </div>
+              <div class="row">
+                <div class="col s4">№ of reports</div>
+                <div class="col s4"><input type="number" placeholder="from" name="from_reports" value="0"></div>
+                <div class="col s4"><input type="number" placeholder="to" name="to_reports" value="0"></div>
+              </div>
+              <div class="row">
+                <div class="col s4">№ of codeunits</div>
+                <div class="col s4"><input type="number" placeholder="from" name="from_codeunits" value="0"></div>
+                <div class="col s4"><input type="number" placeholder="to" name="to_codeunits" value="0"></div>
+              </div>
+              <div class="row">
+                <div class="col s4">№ of dataports</div>
+                <div class="col s4"><input type="number" placeholder="from" name="from_dataports" value="0"></div>
+                <div class="col s4"><input type="number" placeholder="to" name="to_dataports" value="0"></div>
+              </div>
+              <div class="row">
+                <div class="col s4">№ of XML ports</div>
+                <div class="col s4"><input type="number" placeholder="from" name="from_ports" value="0"></div>
+                <div class="col s4"><input type="number" placeholder="to" name="to_ports" value="0"></div>
+              </div>
+              <div class="row">
+                <div class="col s4">№ of Queries</div>
+                <div class="col s4"><input type="number" placeholder="from" name="from_queries" value="0"></div>
+                <div class="col s4"><input type="number" placeholder="to" name="to_queries" value="0"></div>
+              </div>
+              <div class="row">
+                <div class="col s4">№ of Menus</div>
+                <div class="col s4"><input type="number" placeholder="from" name="from_menus" value="0"></div>
+                <div class="col s4"><input type="number" placeholder="to" name="to_menus" value="0"></div>
+              </div>
+              <div class="row">
+                <div class="col s4">№ of Forms</div>
+                <div class="col s4"><input type="number" placeholder="from" name="from_forms" value="0"></div>
+                <div class="col s4"><input type="number" placeholder="to" name="to_forms" value="0"></div>
+              </div>
+              <label for="notes-field"><b>Notes</b></label><br>
+              <label>Here you have the chance to give us futher pointers that
+              you think are relevant to the planned upgrade.</label>
+              <input id="notes-field" type="text" placeholder="notes" name="notes"><br><br>
+              <button class="btn waves-effect waves-light blue darken-1" type="submit" name="action">Send
+              <i class="material-icons right">send</i>
+              </button>
+            </form>
+          {% endblock %}

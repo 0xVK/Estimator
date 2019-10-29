@@ -1,0 +1,6 @@
+flask
+pdfkit
+wkhtmltopdf
+pyexcel
+pyexcel-xlsx
+pyexcel-xls

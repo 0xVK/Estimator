@@ -1,0 +1,146 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta charset="UTF-8">
+      <title>Time estimate result</title>
+    </head>
+    <style type="text/css">
+      body{
+           font-family: 'Bai Jamjuree', sans-serif;
+      }
+      .page-footer{
+        padding: 0;
+        margin-top: 50px;
+      }
+    </style>
+
+    <body>
+      <div class="content">
+        <nav>
+          <div class="nav-wrapper cyan accent-4">
+            <a href="/" class="brand-logo"><i class="material-icons">timer</i>Time Estimate</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="about.html">about</a></li>
+            </ul>
+          </div>
+        </nav>
+          <br>
+          <div class="">
+            <div class="row">
+              <div class="col s6">
+                <label for="fname">First name</label>
+                <input type="text" name="" id="fname" value="{{ data.fname }}">
+              </div>
+              <div class="col s6">
+                <label for="email">Email</label>
+                <input type="text" name="" id="email" value="{{ data.email }}">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s6">
+                <label for="lname">Last name</label>
+                <input type="text" name="" id="lname" value="{{ data.lname }}">
+              </div>
+              <div class="col s6">
+                <label for="phone">Phone</label>
+                <input type="text" name="" id="phone" value="{{ data.phone }}">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <label for="notes"><b>Notes</b></label>
+                <input type="text" name="" value="{{ data.notes }}" id="notes">
+              </div>
+          </div><br>
+
+          <table border="2">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Modificate objects</th>
+                <th>Create objects</th>
+                <th>Total time</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>№ of tables</td>
+              <td>{{data.Tables.from}}</td>
+              <td>{{data.Tables.to}}</td>
+              <td>{{data.Tables.total_time}}</td>
+            </tr>
+            <tr>
+              <td>№ of pages</td>
+              <td>{{data.Page.from}}</td>
+              <td>{{data.Page.to}}</td>
+              <td>{{data.Page.total_time}}</td>
+            </tr>
+            <tr>
+              <td>№ of reports</td>
+              <td>{{data.Reports.from}}</td>
+              <td>{{data.Reports.to}}</td>
+              <td>{{data.Reports.total_time}}</td>
+            </tr>
+            <tr>
+              <td>№ of codeunits</td>
+              <td>{{data.Codeunits.from}}</td>
+              <td>{{data.Codeunits.to}}</td>
+              <td>{{data.Codeunits.total_time}}</td>
+            </tr>
+            <tr>
+              <td>№ of dataports</td>
+              <td>{{data.Dataports.from}}</td>
+              <td>{{data.Dataports.to}}</td>
+              <td>{{data.Dataports.total_time}}</td>
+            </tr>
+            <tr>
+              <td>№ of XML ports</td>
+              <td>{{data.XMLPorts.from}}</td>
+              <td>{{data.XMLPorts.to}}</td>
+              <td>{{data.XMLPorts.total_time}}</td>
+            </tr>
+            <tr>
+              <td>№ of Queries</td>
+              <td>{{data.Queries.from}}</td>
+              <td>{{data.Queries.to}}</td>
+              <td>{{data.Queries.total_time}}</td>
+            </tr>
+            <tr>
+              <td>№ of Menus</td>
+              <td>{{data.Menus.from}}</td>
+              <td>{{data.Menus.to}}</td>
+              <td>{{data.Menus.total_time}}</td>
+            </tr>
+            <tr>
+              <td>№ of XML Forms</td>
+              <td>{{data.Forms.from}}</td>
+              <td>{{data.Forms.to}}</td>
+              <td>{{data.Forms.total_time}}</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><b>{{(data.total_time*0.8)|round(2)}} - {{(data.total_time*1.2)|round(2)}}</b></td>
+            </tr>
+            <tbody>
+          </table>
+
+        <footer class="page-footer cyan accent-5">
+          <div class="footer-copyright" style="text-align: center;">
+            <div>© 2018</div>
+          </div>
+        </footer>
+
+      </div>
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
+  </html>

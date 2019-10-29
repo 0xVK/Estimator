@@ -1,0 +1,19 @@
+1. Розархірувати папку
+
+2. В системі має бути встановлений Пітон 3.*, якщо немає скачати його тут https://www.python.org/downloads/
+
+3. Встановити https://wkhtmltopdf.org/downloads.html
+
+4. Через консоль (cmd) зайти в папку Estimate
+
+5. Встановити потрібні бібліотеки Пітона через pip install -r requirements.txt
+
+6. Додати wkhtmltopdf в системний path. Це можна зробити через set PATH=%PATH%;C:\Program Files\wkhtmltopdf\bin
+де C:\Program Files\wkhtmltopdf\bin це шлях до папки де лежить wkhtmltopdf.exe, який ставили на кроці 3.
+
+7. Запустити сервер через python main.py в консолі
+
+Відкрити в браузері http://127.0.0.1:5000
+
+
+Якщо виникають питання тоді питайте)
